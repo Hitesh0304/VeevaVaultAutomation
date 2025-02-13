@@ -22,20 +22,20 @@ public class LoginTest extends BaseTest {
         Assert.assertFalse(loginPage.isContinueButtonEnabled());
     }
 
-//    @Test
-//    public void testIncorrectPassword() {
-//        loginPage.enterUsername("invalidUsername");
-//        loginPage.clickContinue();
-//        loginPage.enterPassword("incorrectPassword");
-//        loginPage.clickLogin();
-//
-//        // Verify incorrect login attempt message
-//        Assert.assertTrue(loginPage.isIncorrectLoginErrorDisplayed(), "Error message for incorrect password is not displayed");
-//    }
+    @Test (enabled = false)
+    public void testIncorrectPassword() {
+        loginPage.enterUsername("invalidUsername");
+        loginPage.clickContinue();
+        loginPage.enterPassword("incorrectPassword");
+        loginPage.clickLogin();
+
+        // Verify incorrect login attempt message
+        Assert.assertTrue(loginPage.isIncorrectLoginErrorDisplayed(), "Error message for incorrect password is not displayed");
+    }
 
     @Test
     public void testEmptyPassword() {
-        loginPage.enterUsername("someusername");
+        loginPage.enterUsername("test");
         loginPage.clickContinue();
         loginPage.clickLogin();  // Click login without entering a password
 
