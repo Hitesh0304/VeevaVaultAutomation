@@ -1,3 +1,4 @@
+import hiteshtestautomation.pages.LoginPage;
 import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.android.options.UiAutomator2Options;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
@@ -29,13 +30,13 @@ public class BaseTest {
         options.setDeviceName("TestingEmulator");
         options.setAppPackage("com.veeva.vault.mobile");
         options.setAppActivity("veeva.vault.mobile.MainActivity");
-        Thread.sleep(5000);
+        options.setChromedriverExecutable("//Users//hiteshmoudgil//Downloads//chromedriver-mac-arm64//chromedriver");
 
         // Initialize the driver
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
 
         // This is to delay the moving between screens
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
     }
 
     @AfterClass
