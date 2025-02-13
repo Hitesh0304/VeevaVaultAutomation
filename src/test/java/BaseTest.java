@@ -30,7 +30,7 @@ public class BaseTest {
         options.setDeviceName("TestingEmulator");
         options.setAppPackage("com.veeva.vault.mobile");
         options.setAppActivity("veeva.vault.mobile.MainActivity");
-        options.setChromedriverExecutable("//Users//hiteshmoudgil//Downloads//chromedriver-mac-arm64//chromedriver");
+        //options.setChromedriverExecutable("//Users//hiteshmoudgil//Downloads//chromedriver-mac-arm64//chromedriver");
 
         // Initialize the driver
         driver = new AndroidDriver(new URL("http://127.0.0.1:4723/"), options);
