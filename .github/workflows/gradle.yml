@@ -43,12 +43,6 @@ jobs:
       - name: Run Appium Tests
         run: ./gradlew test  # Modify if your test command is different
 
-      - name: Upload Appium Logs (if test fails)
-        if: failure()
-        uses: actions/upload-artifact@v3
-        with:
-          name: appium-logs
-          path: appium.log
 
   dependency-submission:
     runs-on: ubuntu-latest
